@@ -3,9 +3,49 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{36081771-D87C-4BF9-8397-D8B930011352}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicaLosacco.API", "src\ClinicaLosacco.APi\ClinicaLosacco.API.csproj", "{FFED47DA-A288-43B7-BAB1-2F249D91C35A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicaLosacco.Core", "src\ClinicaLosacco.Core\ClinicaLosacco.Core.csproj", "{4447032D-9B4B-44E4-9F97-04F4DEF662E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicaLosacco.Tests", "src\ClinicaLosacco.Tests\ClinicaLosacco.Tests.csproj", "{7167615F-6CCE-43C0-A3C8-7D19474801C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{158E53FF-FD38-4C4A-AFC8-6CA3DAF7A9E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicaLosacco.Application", "ClinicaLosacco.Application\ClinicaLosacco.Application.csproj", "{6A414F0A-147E-43A5-B30A-83E10B43D705}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFED47DA-A288-43B7-BAB1-2F249D91C35A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFED47DA-A288-43B7-BAB1-2F249D91C35A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFED47DA-A288-43B7-BAB1-2F249D91C35A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFED47DA-A288-43B7-BAB1-2F249D91C35A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4447032D-9B4B-44E4-9F97-04F4DEF662E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4447032D-9B4B-44E4-9F97-04F4DEF662E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4447032D-9B4B-44E4-9F97-04F4DEF662E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4447032D-9B4B-44E4-9F97-04F4DEF662E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7167615F-6CCE-43C0-A3C8-7D19474801C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7167615F-6CCE-43C0-A3C8-7D19474801C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7167615F-6CCE-43C0-A3C8-7D19474801C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7167615F-6CCE-43C0-A3C8-7D19474801C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A414F0A-147E-43A5-B30A-83E10B43D705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A414F0A-147E-43A5-B30A-83E10B43D705}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A414F0A-147E-43A5-B30A-83E10B43D705}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A414F0A-147E-43A5-B30A-83E10B43D705}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FFED47DA-A288-43B7-BAB1-2F249D91C35A} = {36081771-D87C-4BF9-8397-D8B930011352}
+		{4447032D-9B4B-44E4-9F97-04F4DEF662E6} = {36081771-D87C-4BF9-8397-D8B930011352}
+		{7167615F-6CCE-43C0-A3C8-7D19474801C5} = {158E53FF-FD38-4C4A-AFC8-6CA3DAF7A9E0}
+		{6A414F0A-147E-43A5-B30A-83E10B43D705} = {36081771-D87C-4BF9-8397-D8B930011352}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F004DD64-1329-4B79-93E6-1E1F16945E6A}
