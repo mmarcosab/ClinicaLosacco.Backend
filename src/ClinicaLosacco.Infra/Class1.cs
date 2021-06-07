@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ClinicaLosacco.Application
+namespace ClinicaLosacco.Infra
 {
     public class Class1
     {

@@ -1,25 +1,29 @@
-﻿using ClinicaLosacco.API.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using ClinicaLosacco.Application.ViewModels;
+using ClinicaLosacco.Application.ViewModels.Request;
 
 namespace ClinicaLosacco.APi.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/doctors")]
     public class DoctorController : ControllerBase
     {
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<DoctorController> _logger;
+
+
 
         [HttpPost]
-        public OutPutDoctorModel create()
+        public OkResult Create(InputDoctorModel inputDoctorModel)
         {
             // colocar o caso de uso aqui.;
+            _logger.LogInformation("chegou na controller");
+            return Ok();
         }
     }
 }

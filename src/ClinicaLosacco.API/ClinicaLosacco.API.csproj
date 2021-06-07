@@ -4,5 +4,14 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ClinicaLosacco.Application\ClinicaLosacco.Application.csproj" />
+    <ProjectReference Include="..\ClinicaLosacco.Infra\ClinicaLosacco.Infra.csproj" />
+  </ItemGroup>
+
 
 </Project>

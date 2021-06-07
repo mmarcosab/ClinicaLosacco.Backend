@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace ClinicaLosacco.API.Models
+namespace ClinicaLosacco.Application.ViewModels.Request
 {
     public class OutPutDoctorModel
     {
         public int Code { get; }
         public string Name { get; }
         public string Crm { get; }
-
         public string Email { get; }
         public string PhoneNumber { get; }
         public List<String> Specialties { get; }
@@ -26,6 +23,5 @@ namespace ClinicaLosacco.API.Models
             Specialties = specialties;
             Address = address;
         }
-
     }
 }

@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace ClinicaLosacco.API.Models
+namespace ClinicaLosacco.Application.ViewModels.Request
 {
     public class InputDoctorModel
     {

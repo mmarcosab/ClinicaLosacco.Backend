@@ -1,4 +1,4 @@
-﻿namespace ClinicaLosacco.API.Models
+﻿namespace ClinicaLosacco.Application.ViewModels.Request
 {
     public class InputAddressModel
     {
