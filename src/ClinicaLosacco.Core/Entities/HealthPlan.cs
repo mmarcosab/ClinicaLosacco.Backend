@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ClinicaLosacco.Core.Entities
 {
@@ -10,27 +8,27 @@ namespace ClinicaLosacco.Core.Entities
         public string RegistrationNumber { get; set; }
         public string Type { get; set;}
 
-        public HealthPlan(string _name, string _registrationNumber, string _type)
+        public HealthPlan(string name, string registrationNumber, string type)
         {
-            validarCampos(_name, _registrationNumber, _type);
-            Name = _name;
-            RegistrationNumber = _registrationNumber;
-            Type = _type;
+            validarCampos(name, registrationNumber, type);
+            Name = name;
+            RegistrationNumber = registrationNumber;
+            Type = type;
         }
 
-        private void validarCampos(string _name, string _registrationNumber, string _type)
+        private void validarCampos(string name, string registrationNumber, string type)
         {
-            if (_name == null || _name.Equals(""))
+            if (String.IsNullOrEmpty(name))
             {
-                throw new Exception("field name must be filled");
+                throw new ArgumentException("field " + nameof(name) + " must be filled");
             }
-            if (_registrationNumber == null || _registrationNumber.Equals(""))
+            if (String.IsNullOrEmpty(registrationNumber))
             {
-                throw new Exception("field registration number must be filled");
+                throw new ArgumentException("field " + nameof(registrationNumber) + " must be filled");
             }
-            if (_type == null || _type.Equals(""))
+            if (String.IsNullOrEmpty(type))
             {
-                throw new Exception("field type must be filled");
+                throw new ArgumentException("field " + nameof(type) + " must be filled");
             }
         }
     }

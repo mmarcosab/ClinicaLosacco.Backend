@@ -10,27 +10,27 @@ namespace ClinicaLosacco.Core.Entities
         public Customer Customer { get; set; }
         public DateTime ScheduledDate { get; set; } 
 
-        public Consultation(Doctor _doctor, Customer _customer, DateTime _scheduledDate)
+        public Consultation(Doctor doctor, Customer customer, DateTime scheduledDate)
         {
-            validarCampos(_doctor, _customer, _scheduledDate);
-            Doctor = _doctor;
-            Customer = _customer;
-            ScheduledDate = _scheduledDate;
+            validarCampos(doctor, customer, scheduledDate);
+            Doctor = doctor;
+            Customer = customer;
+            ScheduledDate = scheduledDate;
         }
 
-        public void validarCampos(Doctor _doctor, Customer _customer, DateTime _scheduledDate)
+        public void validarCampos(Doctor doctor, Customer customer, DateTime scheduledDate)
         {
-            if(_doctor == null)
+            if(doctor == null)
             {
-                throw new Exception("In a consultation doctor can not be null");
+                throw new ArgumentNullException("In a consultation " + nameof(doctor) + " can not be null");
             }
-            if (_customer == null)
+            if (customer == null)
             {
-                throw new Exception("In a consultation customer can not be null");
+                throw new ArgumentNullException("In a consultation " + nameof(customer) + " can not be null");
             }
-            if (_doctor == null)
+            if (scheduledDate == null)
             {
-                throw new Exception("In a consultation scheduled date can not be null");
+                throw new ArgumentNullException("In a consultation " + nameof(scheduledDate) + " can not be null");
             }
         }
     }

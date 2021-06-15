@@ -14,42 +14,42 @@ namespace ClinicaLosacco.Core.Entities
         public Address Address { get; set; }
         public HealthPlan HealthPlan { get; set; }
        
-        public Customer(string _name, string _cpf, int _age, string _email, string _phone, Address _address, HealthPlan _healthPlan)
+        public Customer(string name, string cpf, int age, string email, string phone, Address address, HealthPlan healthPlan)
         {
-            validarCampos(_name, _cpf, _age, _email, _phone, _address);
-            Name = _name;
-            CPF = _cpf;
-            Age = _age;
-            Email = _email;
-            Phone = _phone;
-            Address = _address;
-            HealthPlan = _healthPlan;
+            validarCampos(name, cpf, age, email, phone, address);
+            Name = name;
+            CPF = cpf;
+            Age = age;
+            Email = email;
+            Phone = phone;
+            Address = address;
+            HealthPlan = healthPlan;
         }
-        private void validarCampos(string _name, string _cpf, int _age, string _email, string _phone, Address _address)
+        private void validarCampos(string name, string cpf, int age, string email, string phone, Address address)
         {
-            if (_name == null || _name.Equals(""))
+            if (String.IsNullOrEmpty(name))
             {
-                throw new Exception("field name must be filled ");
+                throw new ArgumentException("field " + nameof(name) + " must be filled");
             }
-            if (_cpf == null || _cpf.Equals(""))
+            if (String.IsNullOrEmpty(cpf))
             {
-                throw new Exception("field cpf must be filled ");
+                throw new ArgumentException("field " + nameof(cpf) + " must be filled");
             }
-            if (_age.Equals(0))
+            if (age.Equals(0))
             {
-                throw new Exception("field age must be filled ");
+                throw new ArgumentException("field " + nameof(age) + " must be filled");
             }
-            if (_email == null || _email.Equals(""))
+            if (String.IsNullOrEmpty(email))
             {
-                throw new Exception("field email must be filled ");
+                throw new ArgumentException("field " + nameof(email) + " must be filled");
             }
-            if (_phone == null || _phone.Equals(""))
+            if (String.IsNullOrEmpty(phone))
             {
-                throw new Exception("field phone must be filled ");
+                throw new ArgumentException("field " + nameof(phone) + " must be filled");
             }
-            if (_address == null)
+            if (address == null)
             {
-                throw new Exception("address must be filled ");
+                throw new ArgumentNullException("field " + nameof(address) + " must be filled");
             }
         }
 

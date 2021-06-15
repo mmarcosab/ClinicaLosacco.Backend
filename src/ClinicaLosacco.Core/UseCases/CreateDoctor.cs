@@ -8,6 +8,6 @@ namespace ClinicaLosacco.Core.UseCases
 {
     class CreateDoctor : ICreateDoctor
     {
- 
+        
     }
 }

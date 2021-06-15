@@ -15,47 +15,47 @@ namespace ClinicaLosacco.Core.Entities
         public string Country { get; set; }
 
 
-        public Address(string _street, int _number, string _complement, string _city, string _state, string _postalCode, string _country)
+        public Address(string street, int number, string complement, string city, string state, string postalCode, string country)
         {
-            validarCampos(_street, _number, _complement, _city, _state, _postalCode, _country);
-            Street = _street;
-            Number = _number;
-            Complement = _complement;
-            City = _city;
-            State = _state;
-            PostalCode = _postalCode;
-            Country = _country;
+            validarCampos(street, number, complement, city, state, postalCode, country);
+            Street = street;
+            Number = number;
+            Complement = complement;
+            City = city;
+            State = state;
+            PostalCode = postalCode;
+            Country = country;
         }
 
-        private void validarCampos(string _street, int _number, string _complement, string _city, string _state, string _postalCode, string _country) 
-        {
-            if (_street == null || _street.Equals(""))
+        private void validarCampos(string street, int number, string complement, string city, string state, string postalCode, string country) 
+        { //TODO - usar o nameof para os campos
+            if(String.IsNullOrEmpty(street))
             {
-                throw new Exception("field street must be filled");
+                throw new ArgumentException("field " + nameof(street) + " must be filled");
             }
-            if (_number.Equals(0))
+            if (number.Equals(0))
             {
-                throw new Exception("field number must be filled");
+                throw new ArgumentException("field " + nameof(number) + " must be filled");
             }
-            if (_complement == null || _complement.Equals(""))
+            if (String.IsNullOrEmpty(complement))
             {
-                throw new Exception("field complement must be filled");
+                throw new ArgumentException("field " + (nameof(complement)) + " complement must be filled");
             }
-            if (_city == null || _city.Equals(""))
+            if (String.IsNullOrEmpty(city))
             {
-                throw new Exception("field city must be filled");
+                throw new ArgumentException("field " + (nameof(city)) + " must be filled");
             }
-            if (_state == null || _state.Equals(""))
+            if (String.IsNullOrEmpty(state))
             {
-                throw new Exception("field state must be filled ");
+                throw new ArgumentException("field " + (nameof(state)) + " must be filled ");
             }
-            if (_postalCode == null || _postalCode.Equals(""))
+            if (String.IsNullOrEmpty(postalCode))
             {
-                throw new Exception("field postal code must be filled");
+                throw new ArgumentException("field " + (nameof(postalCode)) + " must be filled");
             }
-            if (_country == null || _country.Equals(""))
+            if (String.IsNullOrEmpty(country))
             {
-                throw new Exception("field country must be filled");
+                throw new ArgumentException("field " + (nameof(country)) + " must be filled");
             }
 
         }
