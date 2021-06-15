@@ -42,7 +42,7 @@ namespace ClinicaLosacco.Tests.DomainTests
             List<string> specialts = new List<string>();
             specialts.Add("cardiologista");
             Doctor doctor;
-            Assert.Throws<Exception>(() => doctor = new Doctor("", "teste@teste.com.br", "123456789", "2222222", specialts, address));
+            Assert.Throws<ArgumentException>(() => doctor = new Doctor("", "teste@teste.com.br", "123456789", "2222222", specialts, address));
         }
 
         [Fact]
@@ -52,7 +52,7 @@ namespace ClinicaLosacco.Tests.DomainTests
             List<string> specialts = new List<string>();
             specialts.Add("cardiologista");
             Doctor doctor;
-            Assert.Throws<Exception>(() => doctor = new Doctor("Maria", "", "123456789", "2222222", specialts, address));
+            Assert.Throws<ArgumentException>(() => doctor = new Doctor("Maria", "", "123456789", "2222222", specialts, address));
         }
 
         [Fact]
@@ -62,7 +62,7 @@ namespace ClinicaLosacco.Tests.DomainTests
             List<string> specialts = new List<string>();
             specialts.Add("cardiologista");
             Doctor doctor;
-            Assert.Throws<Exception>(() => doctor = new Doctor("Maria", "teste@teste.com.br", "", "2222222", specialts, address));
+            Assert.Throws<ArgumentException>(() => doctor = new Doctor("Maria", "teste@teste.com.br", "", "2222222", specialts, address));
         }
 
         [Fact]
@@ -71,7 +71,7 @@ namespace ClinicaLosacco.Tests.DomainTests
             Address address = new Address("Rua de Teste", 250, "Apartamento 10", "Sao Paulo", "SP", "01234567", "Brasil");
             List<string> specialts = new List<string>();
             Doctor doctor;
-            Assert.Throws<Exception>(() => doctor = new Doctor("Maria", "teste@teste.com.br", "12345678998", "2222222", specialts, address));
+            Assert.Throws<ArgumentException>(() => doctor = new Doctor("Maria", "teste@teste.com.br", "12345678998", "2222222", specialts, address));
         }
 
         [Fact]
@@ -81,7 +81,7 @@ namespace ClinicaLosacco.Tests.DomainTests
             List<string> specialts = new List<string>();
             specialts.Add("cardiologista");
             Doctor doctor;
-            Assert.Throws<Exception>(() => doctor = new Doctor(null, "teste@teste.com.br", "123456789", "2222222", specialts, address));
+            Assert.Throws<ArgumentException>(() => doctor = new Doctor(null, "teste@teste.com.br", "123456789", "2222222", specialts, address));
         }
 
         [Fact]
@@ -91,7 +91,7 @@ namespace ClinicaLosacco.Tests.DomainTests
             List<string> specialts = new List<string>();
             specialts.Add("cardiologista");
             Doctor doctor;
-            Assert.Throws<Exception>(() => doctor = new Doctor("Maria", null, "123456789", "2222222", specialts, address));
+            Assert.Throws<ArgumentException>(() => doctor = new Doctor("Maria", null, "123456789", "2222222", specialts, address));
         }
 
         [Fact]
@@ -101,7 +101,7 @@ namespace ClinicaLosacco.Tests.DomainTests
             List<string> specialts = new List<string>();
             specialts.Add("cardiologista");
             Doctor doctor;
-            Assert.Throws<Exception>(() => doctor = new Doctor("Maria", "teste@teste.com.br", null, "2222222", specialts, address));
+            Assert.Throws<ArgumentException>(() => doctor = new Doctor("Maria", "teste@teste.com.br", null, "2222222", specialts, address));
         }
 
 
@@ -112,7 +112,7 @@ namespace ClinicaLosacco.Tests.DomainTests
             List<string> specialts = new List<string>();
             specialts.Add("cardiologista");
             Doctor doctor;
-            Assert.Throws<Exception>(() => doctor = new Doctor("Maria", "teste@teste.com.br", "12345678998", "2222222", null, address));
+            Assert.Throws<ArgumentException>(() => doctor = new Doctor("Maria", "teste@teste.com.br", "12345678998", "2222222", null, address));
         }
 
         [Fact]
@@ -122,7 +122,7 @@ namespace ClinicaLosacco.Tests.DomainTests
             List<string> specialts = new List<string>();
             specialts.Add("cardiologista");
             Doctor doctor;
-            Assert.Throws<Exception>(() => doctor = new Doctor("Maria", "teste@teste.com.br", "12345678998", "2222222", specialts, null));
+            Assert.Throws<ArgumentNullException>(() => doctor = new Doctor("Maria", "teste@teste.com.br", "12345678998", "2222222", specialts, null));
         }
     }
 }

@@ -24,7 +24,7 @@ namespace ClinicaLosacco.Tests.DomainTests
             Address address = new Address("Rua de Teste", 250, "Apartamento 10", "Sao Paulo", "SP", "01234567", "Brasil");
             HealthPlan healthPlan = new HealthPlan("Sulamerica", "1254785478", "EX5");
             Customer customer;
-            Assert.Throws<Exception>(() => customer = new Customer("", "12345678945", 18, "teste@teste.com", "123456789", address, healthPlan));
+            Assert.Throws<ArgumentException>(() => customer = new Customer("", "12345678945", 18, "teste@teste.com", "123456789", address, healthPlan));
         }
 
         [Fact]
@@ -33,7 +33,7 @@ namespace ClinicaLosacco.Tests.DomainTests
             Address address = new Address("Rua de Teste", 250, "Apartamento 10", "Sao Paulo", "SP", "01234567", "Brasil");
             HealthPlan healthPlan = new HealthPlan("Sulamerica", "1254785478", "EX5");
             Customer customer;
-            Assert.Throws<Exception>(() => customer = new Customer("Jose", "", 18, "teste@teste.com", "123456789", address, healthPlan));
+            Assert.Throws<ArgumentException>(() => customer = new Customer("Jose", "", 18, "teste@teste.com", "123456789", address, healthPlan));
         }
 
         [Fact]
@@ -42,7 +42,7 @@ namespace ClinicaLosacco.Tests.DomainTests
             Address address = new Address("Rua de Teste", 250, "Apartamento 10", "Sao Paulo", "SP", "01234567", "Brasil");
             HealthPlan healthPlan = new HealthPlan("Sulamerica", "1254785478", "EX5");
             Customer customer;
-            Assert.Throws<Exception>(() => customer = new Customer("Jose", "12345678965", 0, "teste@teste.com", "123456789", address, healthPlan));
+            Assert.Throws<ArgumentException>(() => customer = new Customer("Jose", "12345678965", 0, "teste@teste.com", "123456789", address, healthPlan));
         }
 
         [Fact]
@@ -51,7 +51,7 @@ namespace ClinicaLosacco.Tests.DomainTests
             Address address = new Address("Rua de Teste", 250, "Apartamento 10", "Sao Paulo", "SP", "01234567", "Brasil");
             HealthPlan healthPlan = new HealthPlan("Sulamerica", "1254785478", "EX5");
             Customer customer;
-            Assert.Throws<Exception>(() => customer = new Customer("Jose", "12345678965", 0, "", "123456789", address, healthPlan));
+            Assert.Throws<ArgumentException>(() => customer = new Customer("Jose", "12345678965", 0, "", "123456789", address, healthPlan));
         }
 
         [Fact]
@@ -60,7 +60,7 @@ namespace ClinicaLosacco.Tests.DomainTests
             Address address = new Address("Rua de Teste", 250, "Apartamento 10", "Sao Paulo", "SP", "01234567", "Brasil");
             HealthPlan healthPlan = new HealthPlan("Sulamerica", "1254785478", "EX5");
             Customer customer;
-            Assert.Throws<Exception>(() => customer = new Customer("Jose", "12345678965", 20, "teste@teste.com", "", address, healthPlan));
+            Assert.Throws<ArgumentException>(() => customer = new Customer("Jose", "12345678965", 20, "teste@teste.com", "", address, healthPlan));
         }
 
         [Fact]
@@ -69,7 +69,7 @@ namespace ClinicaLosacco.Tests.DomainTests
             Address address = new Address("Rua de Teste", 250, "Apartamento 10", "Sao Paulo", "SP", "01234567", "Brasil");
             HealthPlan healthPlan = new HealthPlan("Sulamerica", "1254785478", "EX5");
             Customer customer;
-            Assert.Throws<Exception>(() => customer = new Customer(null, "12345678945", 18, "teste@teste.com", "123456789", address, healthPlan));
+            Assert.Throws<ArgumentException>(() => customer = new Customer(null, "12345678945", 18, "teste@teste.com", "123456789", address, healthPlan));
         }
 
         [Fact]
@@ -78,7 +78,7 @@ namespace ClinicaLosacco.Tests.DomainTests
             Address address = new Address("Rua de Teste", 250, "Apartamento 10", "Sao Paulo", "SP", "01234567", "Brasil");
             HealthPlan healthPlan = new HealthPlan("Sulamerica", "1254785478", "EX5");
             Customer customer;
-            Assert.Throws<Exception>(() => customer = new Customer("Jose", null, 18, "teste@teste.com", "123456789", address, healthPlan));
+            Assert.Throws<ArgumentException>(() => customer = new Customer("Jose", null, 18, "teste@teste.com", "123456789", address, healthPlan));
         }
 
 
@@ -88,7 +88,7 @@ namespace ClinicaLosacco.Tests.DomainTests
             Address address = new Address("Rua de Teste", 250, "Apartamento 10", "Sao Paulo", "SP", "01234567", "Brasil");
             HealthPlan healthPlan = new HealthPlan("Sulamerica", "1254785478", "EX5");
             Customer customer;
-            Assert.Throws<Exception>(() => customer = new Customer("Jose", "12345678965", 0, null, "123456789", address, healthPlan));
+            Assert.Throws<ArgumentException>(() => customer = new Customer("Jose", "12345678965", 0, null, "123456789", address, healthPlan));
         }
 
         [Fact]
@@ -97,7 +97,7 @@ namespace ClinicaLosacco.Tests.DomainTests
             Address address = new Address("Rua de Teste", 250, "Apartamento 10", "Sao Paulo", "SP", "01234567", "Brasil");
             HealthPlan healthPlan = new HealthPlan("Sulamerica", "1254785478", "EX5");
             Customer customer;
-            Assert.Throws<Exception>(() => customer = new Customer("Jose", "12345678965", 20, "teste@teste.com", null, address, healthPlan));
+            Assert.Throws<ArgumentException>(() => customer = new Customer("Jose", "12345678965", 20, "teste@teste.com", null, address, healthPlan));
         }
 
         [Fact]
@@ -106,7 +106,7 @@ namespace ClinicaLosacco.Tests.DomainTests
             Address address = new Address("Rua de Teste", 250, "Apartamento 10", "Sao Paulo", "SP", "01234567", "Brasil");
             HealthPlan healthPlan = new HealthPlan("Sulamerica", "1254785478", "EX5");
             Customer customer;
-            Assert.Throws<Exception>(() => customer = new Customer("Jose", "12345678965", 0, "teste@teste.com", "123456789", null, healthPlan));
+            Assert.Throws<ArgumentNullException>(() => customer = new Customer("Jose", "12345678965", 20, "teste@teste.com", "123456789", null, healthPlan));
         }
 
         [Fact]
@@ -115,7 +115,7 @@ namespace ClinicaLosacco.Tests.DomainTests
             Address address = new Address("Rua de Teste", 250, "Apartamento 10", "Sao Paulo", "SP", "01234567", "Brasil");
             HealthPlan healthPlan = new HealthPlan("Sulamerica", "1254785478", "EX5");
             Customer customer;
-            Assert.Throws<Exception>(() => customer = new Customer("Jose", "12345678965", 0, "teste@teste.com", "123456789", address, null));
+            Assert.Throws<ArgumentNullException>(() => customer = new Customer("Jose", "12345678965", 20, "teste@teste.com", "123456789", address, null));
         }
 
     }

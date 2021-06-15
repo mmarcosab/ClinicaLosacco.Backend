@@ -1,11 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using ClinicaLosacco.Application.ViewModels;
 using ClinicaLosacco.Application.ViewModels.Request;
+
 
 namespace ClinicaLosacco.APi.Controllers
 {
@@ -14,16 +9,39 @@ namespace ClinicaLosacco.APi.Controllers
     public class DoctorController : ControllerBase
     {
 
-        private readonly ILogger<DoctorController> _logger;
-
-
-
         [HttpPost]
-        public OkResult Create(InputDoctorModel inputDoctorModel)
+        public OkResult Create([FromBody] InputDoctorModel inputDoctorModel)
         {
+
+            
+            //_accessMongo.Add(inputDoctorModel);
             // colocar o caso de uso aqui.;
-            _logger.LogInformation("chegou na controller");
+
             return Ok();
         }
+
+        [HttpGet]
+        public OkResult GetAll()
+        {
+            // colocar o caso de uso aqui.;
+            return Ok();
+        }
+
+        [HttpGet]
+        [Route("/{doctorId}")]
+        public OkResult GetById(int doctorId)
+        {
+            // colocar o caso de uso aqui.;
+            return Ok();
+        }
+
+        [HttpDelete]
+        [Route("/{doctorId}")]
+        public OkResult Inactivate(int id)
+        {
+            // colocar o caso de uso aqui.;
+            return Ok();
+        }
+
     }
 }

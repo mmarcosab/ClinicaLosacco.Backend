@@ -5,17 +5,22 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{36081771-D87C-4BF9-8397-D8B930011352}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicaLosacco.API", "src\ClinicaLosacco.APi\ClinicaLosacco.API.csproj", "{FFED47DA-A288-43B7-BAB1-2F249D91C35A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicaLosacco.API", "src\ClinicaLosacco.APi\ClinicaLosacco.API.csproj", "{FFED47DA-A288-43B7-BAB1-2F249D91C35A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicaLosacco.Core", "src\ClinicaLosacco.Core\ClinicaLosacco.Core.csproj", "{4447032D-9B4B-44E4-9F97-04F4DEF662E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicaLosacco.Core", "src\ClinicaLosacco.Core\ClinicaLosacco.Core.csproj", "{4447032D-9B4B-44E4-9F97-04F4DEF662E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicaLosacco.Tests", "src\ClinicaLosacco.Tests\ClinicaLosacco.Tests.csproj", "{7167615F-6CCE-43C0-A3C8-7D19474801C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicaLosacco.Tests", "src\ClinicaLosacco.Tests\ClinicaLosacco.Tests.csproj", "{7167615F-6CCE-43C0-A3C8-7D19474801C5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{158E53FF-FD38-4C4A-AFC8-6CA3DAF7A9E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicaLosacco.Application", "src\ClinicaLosacco.Application\ClinicaLosacco.Application.csproj", "{AFB91179-3377-4D6F-B43D-846C0DD5B85B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicaLosacco.Application", "src\ClinicaLosacco.Application\ClinicaLosacco.Application.csproj", "{AFB91179-3377-4D6F-B43D-846C0DD5B85B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicaLosacco.Infra", "src\ClinicaLosacco.Infra\ClinicaLosacco.Infra.csproj", "{3141F085-AB9D-4C94-B35A-781EBB7911A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicaLosacco.Infra", "src\ClinicaLosacco.Infra\ClinicaLosacco.Infra.csproj", "{3141F085-AB9D-4C94-B35A-781EBB7911A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F3027D9D-EF41-471A-BF70-76693852B69A}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

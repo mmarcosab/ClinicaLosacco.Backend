@@ -21,41 +21,48 @@ namespace ClinicaLosacco.Tests.DomainTests
         public void criarAddressFailWithNoStreet() 
         {
             Address address;
-            Assert.Throws<Exception>(() => address = new Address("", 250, "Apartamento 10", "Sao Paulo", "SP", "01234567", "Brasil"));
+            Assert.Throws<ArgumentException>(() => address = new Address("", 250, "Apartamento 10", "Sao Paulo", "SP", "01234567", "Brasil"));
         }
         
         [Fact]
         public void criarAddressFailWithNoNumber()
         {
             Address address;
-            Assert.Throws<Exception>(() => address = new Address("Rua de teste", 0, "Apartamento 10", "Sao Paulo", "SP", "01234567", "Brasil"));
+            Assert.Throws<ArgumentException>(() => address = new Address("Rua de teste", 0, "Apartamento 10", "Sao Paulo", "SP", "01234567", "Brasil"));
         }
         
         [Fact]
         public void criarAddressFailWithNoCity()
         {
             Address address;
-            Assert.Throws<Exception>(() => address = new Address("Rua de teste", 250, "Apartamento 10", "", "SP", "01234567", "Brasil"));
+            Assert.Throws<ArgumentException>(() => address = new Address("Rua de teste", 250, "Apartamento 10", "", "SP", "01234567", "Brasil"));
         }
         
         [Fact]
         public void criarAddressFailWithNoState()
         {
             Address address;
-            Assert.Throws<Exception>(() => address = new Address("Rua de teste", 250, "Apartamento 10", "Sao Paulo", "", "01234567", "Brasil"));
+            Assert.Throws<ArgumentException>(() => address = new Address("Rua de teste", 250, "Apartamento 10", "Sao Paulo", "", "01234567", "Brasil"));
         }
         
         [Fact]
         public void criarAddressFailWithNoPostCode()
         {
             Address address;
-            Assert.Throws<Exception>(() => address = new Address("Rua de teste", 250, "Apartamento 10", "Sao Paulo", "SP", "", "Brasil"));
+            Assert.Throws<ArgumentException>(() => address = new Address("Rua de teste", 250, "Apartamento 10", "Sao Paulo", "SP", "", "Brasil"));
         }
         [Fact]
         public void criarAddressFailWithNoCountry()
         {
             Address address;
-            Assert.Throws<Exception>(() => address = new Address("Rua de teste", 250, "Apartamento 10", "Sao Paulo", "SP", "01234567", ""));
+            Assert.Throws<ArgumentException>(() => address = new Address("Rua de teste", 250, "Apartamento 10", "Sao Paulo", "SP", "01234567", ""));
+        }
+
+        [Fact]
+        public void criarAddressFailWithNoComplement()
+        {
+            Address address;
+            Assert.Throws<ArgumentException>(() => address = new Address("Rua de teste", 250, "", "Sao Paulo", "SP", "01234567", "Brasil"));
         }
 
 
@@ -63,7 +70,7 @@ namespace ClinicaLosacco.Tests.DomainTests
         public void criarAddressFailWithNullStreet()
         {
             Address address;
-            Assert.Throws<Exception>(() => address = new Address(null, 250, "Apartamento 10", "Sao Paulo", "SP", "01234567", "Brasil"));
+            Assert.Throws<ArgumentException>(() => address = new Address(null, 250, "Apartamento 10", "Sao Paulo", "SP", "01234567", "Brasil"));
         }
 
 
@@ -71,29 +78,35 @@ namespace ClinicaLosacco.Tests.DomainTests
         public void criarAddressFailWithNullCity()
         {
             Address address;
-            Assert.Throws<Exception>(() => address = new Address("Rua de teste", 250, "Apartamento 10", null, "SP", "01234567", "Brasil"));
+            Assert.Throws<ArgumentException>(() => address = new Address("Rua de teste", 250, "Apartamento 10", null, "SP", "01234567", "Brasil"));
         }
 
         [Fact]
         public void criarAddressFailWithNullState()
         {
             Address address;
-            Assert.Throws<Exception>(() => address = new Address("Rua de teste", 250, "Apartamento 10", "Sao Paulo", null, "01234567", "Brasil"));
+            Assert.Throws<ArgumentException>(() => address = new Address("Rua de teste", 250, "Apartamento 10", "Sao Paulo", null, "01234567", "Brasil"));
         }
 
         [Fact]
         public void criarAddressFailWithNullPostCode()
         {
             Address address;
-            Assert.Throws<Exception>(() => address = new Address("Rua de teste", 250, "Apartamento 10", "Sao Paulo", "SP", null, "Brasil"));
+            Assert.Throws<ArgumentException>(() => address = new Address("Rua de teste", 250, "Apartamento 10", "Sao Paulo", "SP", null, "Brasil"));
         }
         [Fact]
         public void criarAddressFailWithNullCountry()
         {
             Address address;
-            Assert.Throws<Exception>(() => address = new Address("Rua de teste", 250, "Apartamento 10", "Sao Paulo", "SP", "01234567", null));
+            Assert.Throws<ArgumentException>(() => address = new Address("Rua de teste", 250, "Apartamento 10", "Sao Paulo", "SP", "01234567", null));
         }
 
+        [Fact]
+        public void criarAddressFailWithNullCcomplement()
+        {
+            Address address;
+            Assert.Throws<ArgumentException>(() => address = new Address("Rua de teste", 250, null, "Sao Paulo", "SP", "01234567", "Brasil"));
+        }
 
     }
 }

@@ -25,7 +25,7 @@ namespace ClinicaLosacco.Tests.DomainTests
         {
             Address address = new Address("Rua de Teste", 250, "Apartamento 10", "Sao Paulo", "SP", "01234567", "Brasil");
             Employee employee;
-            Assert.Throws<Exception>(() => employee = new Employee("", "teste@teste.com.br", "123456789", address));
+            Assert.Throws<ArgumentException>(() => employee = new Employee("", "teste@teste.com.br", "123456789", address));
         }
 
         [Fact]
@@ -33,7 +33,7 @@ namespace ClinicaLosacco.Tests.DomainTests
         {
             Address address = new Address("Rua de Teste", 250, "Apartamento 10", "Sao Paulo", "SP", "01234567", "Brasil");
             Employee employee;
-            Assert.Throws<Exception>(() => employee = new Employee("Maria", "", "123456789", address));
+            Assert.Throws<ArgumentException>(() => employee = new Employee("Maria", "", "123456789", address));
         }
 
         [Fact]
@@ -41,7 +41,7 @@ namespace ClinicaLosacco.Tests.DomainTests
         {
             Address address = new Address("Rua de Teste", 250, "Apartamento 10", "Sao Paulo", "SP", "01234567", "Brasil");
             Employee employee;
-            Assert.Throws<Exception>(() => employee = new Employee("Maria", "teste@teste.com.br", "", address));
+            Assert.Throws<ArgumentException>(() => employee = new Employee("Maria", "teste@teste.com.br", "", address));
         }
 
         [Fact]
@@ -49,7 +49,7 @@ namespace ClinicaLosacco.Tests.DomainTests
         {
             Address address = new Address("Rua de Teste", 250, "Apartamento 10", "Sao Paulo", "SP", "01234567", "Brasil");
             Employee employee;
-            Assert.Throws<Exception>(() => employee = new Employee(null, "teste@teste.com.br", "123456789", address));
+            Assert.Throws<ArgumentException>(() => employee = new Employee(null, "teste@teste.com.br", "123456789", address));
         }
 
         [Fact]
@@ -57,7 +57,7 @@ namespace ClinicaLosacco.Tests.DomainTests
         {
             Address address = new Address("Rua de Teste", 250, "Apartamento 10", "Sao Paulo", "SP", "01234567", "Brasil");
             Employee employee;
-            Assert.Throws<Exception>(() => employee = new Employee("Maria", null, "123456789", address));
+            Assert.Throws<ArgumentException>(() => employee = new Employee("Maria", null, "123456789", address));
         }
 
         [Fact]
@@ -65,14 +65,14 @@ namespace ClinicaLosacco.Tests.DomainTests
         {
             Address address = new Address("Rua de Teste", 250, "Apartamento 10", "Sao Paulo", "SP", "01234567", "Brasil");
             Employee employee;
-            Assert.Throws<Exception>(() => employee = new Employee("Maria", "teste@teste.com.br", null, address));
+            Assert.Throws<ArgumentException>(() => employee = new Employee("Maria", "teste@teste.com.br", null, address));
         }
         [Fact]
         public void criarEmployeeFailWithNullAddress()
         {
             Address address = new Address("Rua de Teste", 250, "Apartamento 10", "Sao Paulo", "SP", "01234567", "Brasil");
             Employee employee;
-            Assert.Throws<Exception>(() => employee = new Employee("Maria", "teste@teste.com.br", "12345678974", null));
+            Assert.Throws<ArgumentNullException>(() => employee = new Employee("Maria", "teste@teste.com.br", "12345678974", null));
         }
     }
 }
