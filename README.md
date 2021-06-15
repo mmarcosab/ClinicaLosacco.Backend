@@ -10,6 +10,7 @@ Backend:
 - [Swagger](https://swagger.io/) - Para documentar e testar a api
 - [xUnit](https://xunit.net/) - Para testes unitários e de integração
 - [Docker](https://www.docker.com/) - Tecnologia utilizada para a entrega da aplicação
+- [MongoDB](https://www.mongodb.com/) - Banco de dados utilizado para armazenar todas as informações do sistema
 
 ## Instalação
 
@@ -47,3 +48,14 @@ Executar o comando no diretorio TestResults:
 ## Docker
 ### /dockerfile
 - Na raiz do projeto existe um arquivo dockerfile, pronto para ser usado e gerar uma imagem docker
+
+
+
+## Andamento do projeto:
+
+ - [x] Entidades de domínio e testes unitátios
+ - [ ] Services/UseCases e testes unitários
+ - [ ] Adapters de entrada testes unitários
+ - [ ] Modelos de entrada/saída e testes unitários
+ - [ ] Adapters de banco de dados
+ - [ ] DB Entities e testes unitários

@@ -16,7 +16,7 @@ namespace ClinicaLosacco.Core.Entities
        
         public Customer(string name, string cpf, int age, string email, string phone, Address address, HealthPlan healthPlan)
         {
-            validarCampos(name, cpf, age, email, phone, address);
+            validarCampos(name, cpf, age, email, phone, address, healthPlan);
             Name = name;
             CPF = cpf;
             Age = age;
@@ -25,7 +25,7 @@ namespace ClinicaLosacco.Core.Entities
             Address = address;
             HealthPlan = healthPlan;
         }
-        private void validarCampos(string name, string cpf, int age, string email, string phone, Address address)
+        private void validarCampos(string name, string cpf, int age, string email, string phone, Address address, HealthPlan healthPlan)
         {
             if (String.IsNullOrEmpty(name))
             {
@@ -50,6 +50,10 @@ namespace ClinicaLosacco.Core.Entities
             if (address == null)
             {
                 throw new ArgumentNullException("field " + nameof(address) + " must be filled");
+            }
+            if (healthPlan == null)
+            {
+                throw new ArgumentNullException("field " + nameof(healthPlan) + " must be filled");
             }
         }
 

@@ -12,5 +12,10 @@ namespace ClinicaLosacco.Core.Entities
         }
 
         //TODO - méodo marcar consulta
+
+        public Consultation makeAnAppointment(Doctor doctor, Customer customer, DateTime scheduledDate)
+        {
+            return new Consultation(doctor, customer, scheduledDate);
+        }
     }
 }
