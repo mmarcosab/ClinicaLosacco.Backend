@@ -60,7 +60,8 @@ Executar o comando no diretorio TestResults:
  - [ ] Adapters de entrada testes unitários
  - [ ] Modelos de entrada/saída e testes unitários
  - [ ] Adapters de banco de dados
- - [ ] DB Entities e testes unitários
+ - [x] DB Entities e testes unitários
 
 
  ## Relatório de cobertura de código:
+ <img src="/code-coverage.png" alt="Code Coverage"/>
