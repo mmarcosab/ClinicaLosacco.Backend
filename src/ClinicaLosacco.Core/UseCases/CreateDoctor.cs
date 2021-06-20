@@ -1,8 +1,4 @@
-﻿using ClinicaLosacco.Core.Entities;
-using ClinicaLosacco.Core.UseCases.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using ClinicaLosacco.Core.UseCases.Interfaces;
 
 namespace ClinicaLosacco.Core.UseCases
 {

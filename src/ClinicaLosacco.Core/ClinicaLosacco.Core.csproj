@@ -8,4 +8,8 @@
     <DocumentationFile>C:\workspace-visualstudio\ClinicaLosacco\ClinicaLosacco\src\ClinicaLosacco.Core\ClinicaLosacco.Core.xml</DocumentationFile>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="UseCases\NovaPasta\" />
+  </ItemGroup>
+
 </Project>

@@ -10,7 +10,8 @@ Backend:
 - [Swagger](https://swagger.io/) - Para documentar e testar a api
 - [xUnit](https://xunit.net/) - Para testes unitários e de integração
 - [Docker](https://www.docker.com/) - Tecnologia utilizada para a entrega da aplicação
-- [MongoDB](https://www.mongodb.com/) - Banco de dados utilizado para armazenar todas as informações do sistema
+- [MySql](https://www.mysql.com/) - Banco de dados utilizado para armazenar todas as informações do sistema
+- [Entity Framework Core](https://docs.microsoft.com/pt-br/ef/core/) - Framework utilizado para facilitar o acesso a dados da aplicação
 
 ## Instalação
 
@@ -27,7 +28,7 @@ Backend:
 
 ### Testes unitários
 
-Como verificar a cobertura de testes ? 
+Para verificar a cobertura de testes:
 
 Instalar o plugin:
 - dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.8.6
@@ -59,3 +60,8 @@ Executar o comando no diretorio TestResults:
  - [ ] Modelos de entrada/saída e testes unitários
  - [ ] Adapters de banco de dados
  - [ ] DB Entities e testes unitários
+
+
+
+ ## Relatório de cobertura de código:
+ ![](/imgs/code-coverage.PNG)

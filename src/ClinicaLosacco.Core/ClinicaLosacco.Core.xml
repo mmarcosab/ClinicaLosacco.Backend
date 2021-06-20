@@ -4,21 +4,10 @@
         <name>ClinicaLosacco.Core</name>
     </assembly>
     <members>
-        <member name="T:ClinicaLosacco.Core.Entities.Doctor">
+        <member name="T:ClinicaLosacco.Core.Entities.Medico">
             <summary>
             This class define a doctor of Clinica Losacco
             </summary>
-        </member>
-        <member name="M:ClinicaLosacco.Core.Entities.Doctor.#ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.String},ClinicaLosacco.Core.Entities.Address)">
-            <summary>
-            
-            </summary>
-            <param name="name"> Represents the doctor's name and can not be null o empty </param>
-            <param name="email">Represents the doctor's email and can not be null o empty </param>
-            <param name="phoneNumber">Represents the doctor's phone number and can not be null o empty </param>
-            <param name="crm">Represents the doctor's CRM and can not be null o empty </param>
-            <param name="specialties">Represents the doctor's specialts and can not be null o empty </param>
-            <param name="address">Represents the doctor's adrees and can not be null o empty </param>
         </member>
     </members>
 </doc>
