@@ -3,14 +3,14 @@
 
 namespace ClinicaLosacco.Application.DbModels
 {
-    public class Consulta
+    public class ConsultaDb
     {
         public int ConsultaId { get; set; }
-        public Medico Medico { get; set; }
-        public Paciente Paciente { get; set; }
+        public MedicoDb Medico { get; set; }
+        public PacienteDb Paciente { get; set; }
         public DateTime Data { get; set; } 
 
-        public Consulta(Medico medico, Paciente paciente, DateTime data)
+        public ConsultaDb(MedicoDb medico, PacienteDb paciente, DateTime data)
         {
             Medico = medico;
             Paciente = paciente;

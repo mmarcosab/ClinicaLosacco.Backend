@@ -3,7 +3,7 @@
 
 namespace ClinicaLosacco.Application.DbModels
 {
-    public class Paciente
+    public class PacienteDb
     {
         public int PacienteId { get; set; }
         public string Nome { get; set; }
@@ -11,10 +11,10 @@ namespace ClinicaLosacco.Application.DbModels
         public DateTime DataNascimento { get; set; }
         public string Email { get; set; }
         public string Telefone { get; set; }
-        public Endereco Endereco { get; set; }
-        public PlanoSaude PlanoSaude { get; set; }
+        public EnderecoDb Endereco { get; set; }
+        public PlanoSaudeDb PlanoSaude { get; set; }
        
-        public Paciente(string nome, string cpf, DateTime dataNascimento, string email, string telefone, Endereco endereco, PlanoSaude planoSaude)
+        public PacienteDb(string nome, string cpf, DateTime dataNascimento, string email, string telefone, EnderecoDb endereco, PlanoSaudeDb planoSaude)
         {
             Nome = nome;
             Cpf = cpf;

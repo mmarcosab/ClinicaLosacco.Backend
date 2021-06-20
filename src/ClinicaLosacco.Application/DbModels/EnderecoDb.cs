@@ -2,7 +2,7 @@
 
 namespace ClinicaLosacco.Application.DbModels
 {
-    public class Endereco
+    public class EnderecoDb
     {
         public int EnderecoId { get; set; }
         public string Rua { get; set; }
@@ -14,7 +14,7 @@ namespace ClinicaLosacco.Application.DbModels
         public string Pais { get; set; }
 
 
-        public Endereco(string rua, int numero, string complemento, string cidade, string uf, string cep, string pais)
+        public EnderecoDb(string rua, int numero, string complemento, string cidade, string uf, string cep, string pais)
         {
             Rua = rua;
             Numero = numero;

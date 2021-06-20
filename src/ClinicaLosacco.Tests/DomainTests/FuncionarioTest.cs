@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using ClinicaLosacco.Core.Entities;
 using Xunit;
 
@@ -78,4 +76,3 @@ namespace ClinicaLosacco.Tests.DomainTests
 
     }
 }
-

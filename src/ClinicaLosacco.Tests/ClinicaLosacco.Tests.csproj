@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ClinicaLosacco.Application\ClinicaLosacco.Application.csproj" />
     <ProjectReference Include="..\ClinicaLosacco.Core\ClinicaLosacco.Core.csproj" />
   </ItemGroup>
 
