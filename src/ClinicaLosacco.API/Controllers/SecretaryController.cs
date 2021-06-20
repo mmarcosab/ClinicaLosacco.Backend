@@ -5,12 +5,12 @@ using ClinicaLosacco.Application.ViewModels.Request;
 namespace ClinicaLosacco.APi.Controllers
 {
     [ApiController]
-    [Route("api/doctors")]
-    public class DoctorController : ControllerBase
+    [Route("api/secretaries")]
+    public class SecretaryController : ControllerBase
     {
 
         [HttpPost]
-        public OkResult Create([FromBody] InputDoctorModel inputDoctorModel)
+        public OkResult Create([FromBody] object someObject)
         {            
             //_accessMongo.Add(inputDoctorModel);
             // colocar o caso de uso aqui.;
@@ -24,16 +24,24 @@ namespace ClinicaLosacco.APi.Controllers
             return Ok();
         }
 
-        [HttpGet("{doctorId}")]
+        [HttpGet("{secretaryId}")]
         public OkResult GetById(int doctorId)
         {
             // colocar o caso de uso aqui.;
             return Ok();
         }
 
-        [HttpDelete("{doctorId}")]
+        [HttpDelete("{secretaryId}")]
         public OkResult Inactivate(int id)
         {
+            // colocar o caso de uso aqui.;
+            return Ok();
+        }
+
+        [HttpPost("{secretaryId}/consultations")]
+        public OkResult CreateConsultation()
+        {
+            //_accessMongo.Add(inputDoctorModel);
             // colocar o caso de uso aqui.;
             return Ok();
         }

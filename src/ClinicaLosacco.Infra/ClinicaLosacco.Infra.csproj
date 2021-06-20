@@ -5,10 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MongoDB.Driver" Version="2.12.4" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.0" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql.Design" Version="1.1.2" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ClinicaLosacco.Application\ClinicaLosacco.Application.csproj" />
     <ProjectReference Include="..\ClinicaLosacco.Core\ClinicaLosacco.Core.csproj" />
   </ItemGroup>
 
