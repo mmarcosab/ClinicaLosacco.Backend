@@ -55,6 +55,7 @@ Executar o comando no diretorio TestResults:
 ## Andamento do projeto:
 
  - [x] Entidades de domínio e testes unitátios
+ - [x] Swagger
  - [ ] Services/UseCases e testes unitários
  - [ ] Adapters de entrada testes unitários
  - [ ] Modelos de entrada/saída e testes unitários
@@ -62,6 +63,4 @@ Executar o comando no diretorio TestResults:
  - [ ] DB Entities e testes unitários
 
 
-
  ## Relatório de cobertura de código:
- ![](/imgs/code-coverage.PNG)
