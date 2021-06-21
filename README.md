@@ -64,4 +64,4 @@ Executar o comando no diretorio TestResults:
 
 
  ## Relatório de cobertura de código:
- ![alt text](code-coverage.png "Optional title")
+ ![alt text](https://github.com/mmarcosab/clinica-losacco/tree/develop/code-coverage.png "code Coverage")
