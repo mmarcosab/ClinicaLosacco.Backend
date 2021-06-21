@@ -1,6 +1,15 @@
 # Sistema para clinica
 
 
+##Features
+
+- [ ] Manutenção de pacientes
+- [ ] Manutenção de colaboradores
+- [ ] Agendamento de consultas
+- [ ] Fluxo de caixa
+- [ ] Relatórios
+
+
 ## Tecnologias
 
 Backend:
@@ -22,9 +31,7 @@ Backend:
         docker push tag repositorio/nome-da-imagem
         docker pull repositorio/nome-da-imagem
 
-
 ## Testes
-
 
 ### Testes unitários
 
@@ -40,16 +47,13 @@ Executar o comando no diretorio TestResults:
 - reportgenerator "-reports:coverage.cobertura.xml" "-targetdir:coveragereport" -reporttypes:Html
 
 
-
 ## Documentação
 - Os métodos estão disponiveis na rota https://localhost:5001/swagger/index.html
-
 
 
 ## Docker
 ### /dockerfile
 - Na raiz do projeto existe um arquivo dockerfile, pronto para ser usado e gerar uma imagem docker
-
 
 
 ## Andamento do projeto:
@@ -64,4 +68,5 @@ Executar o comando no diretorio TestResults:
 
 
  ## Relatório de cobertura de código:
+
  ![code-coverage](https://user-images.githubusercontent.com/40812575/122695343-822c8000-d216-11eb-8d17-d7af8e72d2f7.PNG)

@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ClinicaLosacco.Application.ViewModels.Request;
 
 
 namespace ClinicaLosacco.APi.Controllers

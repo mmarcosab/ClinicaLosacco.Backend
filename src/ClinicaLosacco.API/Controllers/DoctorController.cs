@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ClinicaLosacco.Application.ViewModels.Request;
 
 
 namespace ClinicaLosacco.APi.Controllers
@@ -10,7 +9,7 @@ namespace ClinicaLosacco.APi.Controllers
     {
 
         [HttpPost]
-        public OkResult Create([FromBody] InputDoctorModel inputDoctorModel)
+        public OkResult Create()
         {            
             //_accessMongo.Add(inputDoctorModel);
             // colocar o caso de uso aqui.;

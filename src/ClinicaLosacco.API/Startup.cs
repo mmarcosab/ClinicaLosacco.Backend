@@ -4,7 +4,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-
+using ClinicaLosacco.Infra.AccessBD;
+using Microsoft.EntityFrameworkCore;
+using MySqlConnector;
 
 namespace ClinicaLosacco.APi
 {
@@ -20,11 +22,17 @@ namespace ClinicaLosacco.APi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TodoAPI", Version = "v1" });
             });
+
+            string mySqlConnectionString = Configuration.GetConnectionString("DefaultConnection");
+            services.AddDbContextPool<AppDbContext>(options => options.UseMySql(mySqlConnectionString, ServerVersion.AutoDetect(mySqlConnectionString)));
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
