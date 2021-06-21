@@ -64,4 +64,4 @@ Executar o comando no diretorio TestResults:
 
 
  ## Relatório de cobertura de código:
- <img src="./code-coverage.png" alt="Code Coverage"/>
+ ![alt text](code-coverage.png "Optional title")
