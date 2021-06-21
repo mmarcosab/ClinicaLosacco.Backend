@@ -5,15 +5,15 @@
 
 Backend:
 
-- [C#](https://docs.microsoft.com/pt-br/dotnet/csharp/) - Linguagem de programação utilizada para desenvolvimento do módulo backend
-- [Spring Boot](https://dotnet.microsoft.com/) - Framewwork utilizado para auxiliar no desenvolvimento do módulo backend
+- [C#](https://docs.microsoft.com/pt-br/dotnet/csharp/) - Linguagem de programaÃ§Ã£o utilizada para desenvolvimento do mÃ³dulo backend
+- [Spring Boot](https://dotnet.microsoft.com/) - Framewwork utilizado para auxiliar no desenvolvimento do mÃ³dulo backend
 - [Swagger](https://swagger.io/) - Para documentar e testar a api
-- [xUnit](https://xunit.net/) - Para testes unitários e de integração
-- [Docker](https://www.docker.com/) - Tecnologia utilizada para a entrega da aplicação
-- [MySql](https://www.mysql.com/) - Banco de dados utilizado para armazenar todas as informações do sistema
-- [Entity Framework Core](https://docs.microsoft.com/pt-br/ef/core/) - Framework utilizado para facilitar o acesso a dados da aplicação
+- [xUnit](https://xunit.net/) - Para testes unitÃ¡rios e de integraÃ§Ã£o
+- [Docker](https://www.docker.com/) - Tecnologia utilizada para a entrega da aplicaÃ§Ã£o
+- [MySql](https://www.mysql.com/) - Banco de dados utilizado para armazenar todas as informaÃ§Ãµes do sistema
+- [Entity Framework Core](https://docs.microsoft.com/pt-br/ef/core/) - Framework utilizado para facilitar o acesso a dados da aplicaÃ§Ã£o
 
-## Instalação
+## InstalaÃ§Ã£o
 
 #### Docker
 - Use o arquivo dockerfile na raiz do projeto e gere uma imagem, exemplo de comandos:
@@ -26,7 +26,7 @@ Backend:
 ## Testes
 
 
-### Testes unitários
+### Testes unitÃ¡rios
 
 Para verificar a cobertura de testes:
 
@@ -41,8 +41,8 @@ Executar o comando no diretorio TestResults:
 
 
 
-## Documentação
-- Os métodos estão disponiveis na rota https://localhost:5001/swagger/index.html
+## DocumentaÃ§Ã£o
+- Os mÃ©todos estÃ£o disponiveis na rota https://localhost:5001/swagger/index.html
 
 
 
@@ -54,14 +54,14 @@ Executar o comando no diretorio TestResults:
 
 ## Andamento do projeto:
 
- - [x] Entidades de domínio e testes unitátios
+ - [x] Entidades de domÃ­nio e testes unitÃ¡tios
  - [x] Swagger
- - [ ] Services/UseCases e testes unitários
- - [ ] Adapters de entrada testes unitários
- - [ ] Modelos de entrada/saída e testes unitários
+ - [ ] Services/UseCases e testes unitÃ¡rios
+ - [ ] Adapters de entrada testes unitÃ¡rios
+ - [ ] Modelos de entrada/saÃ­da e testes unitÃ¡rios
  - [ ] Adapters de banco de dados
- - [x] DB Entities e testes unitários
+ - [x] DB Entities e testes unitÃ¡rios
 
 
- ## Relatório de cobertura de código:
- ![alt text](https://github.com/mmarcosab/clinica-losacco/tree/develop/code-coverage.png "code Coverage")
+ ## RelatÃ³rio de cobertura de cÃ³digo:
+ ![code-coverage](https://user-images.githubusercontent.com/40812575/122695343-822c8000-d216-11eb-8d17-d7af8e72d2f7.PNG)
