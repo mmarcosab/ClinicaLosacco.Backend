@@ -1,7 +1,6 @@
 # Sistema para clinica
 
-
-##Features
+## Features
 
 - [ ] Manutenção de pacientes
 - [ ] Manutenção de colaboradores
@@ -9,13 +8,12 @@
 - [ ] Fluxo de caixa
 - [ ] Relatórios
 
-
 ## Tecnologias
 
 Backend:
 
 - [C#](https://docs.microsoft.com/pt-br/dotnet/csharp/) - Linguagem de programação utilizada para desenvolvimento do módulo backend
-- [Spring Boot](https://dotnet.microsoft.com/) - Framewwork utilizado para auxiliar no desenvolvimento do módulo backend
+- [.Net Core](https://dotnet.microsoft.com/) - Framewwork utilizado para auxiliar no desenvolvimento do módulo backend
 - [Swagger](https://swagger.io/) - Para documentar e testar a api
 - [xUnit](https://xunit.net/) - Para testes unitários e de integração
 - [Docker](https://www.docker.com/) - Tecnologia utilizada para a entrega da aplicação
@@ -50,7 +48,6 @@ Executar o comando no diretorio TestResults:
 ## Documentação
 - Os métodos estão disponiveis na rota https://localhost:5001/swagger/index.html
 
-
 ## Docker
 ### /dockerfile
 - Na raiz do projeto existe um arquivo dockerfile, pronto para ser usado e gerar uma imagem docker
@@ -58,15 +55,39 @@ Executar o comando no diretorio TestResults:
 
 ## Andamento do projeto:
 
- - [x] Entidades de domínio e testes unitátios
+ - [x] Entidades de domínio e testes unitár4ios
  - [x] Swagger
  - [ ] Services/UseCases e testes unitários
  - [ ] Adapters de entrada testes unitários
  - [ ] Modelos de entrada/saída e testes unitários
  - [ ] Adapters de banco de dados
  - [x] DB Entities e testes unitários
+ - [x] Conexão com DB
 
 
  ## Relatório de cobertura de código:
 
  ![code-coverage](https://user-images.githubusercontent.com/40812575/122695343-822c8000-d216-11eb-8d17-d7af8e72d2f7.PNG)
+
+
+ ## Arquitetura do projeto:
+
+         ClinicaLosacco.API
+            - Controllers que dão acesso ao sistema
+         
+         ClinicaLosacco.Application
+           - Modelos de Entrada
+           - Modelos de Saída
+           - Serviços de Aplicação
+
+         ClinicaLosacco.Infra
+           - Serviços de infraestrutura (logging, cloud, db)
+           - Persistência
+           - Integração com outros sistemas
+         
+         ClinicaLosacco.Core
+            - Entidades
+            - Enums 
+            - Exceções de domínio
+            - Interfaces
+            - Serviços
