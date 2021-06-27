@@ -1,18 +1,26 @@
 # Sistema para clinica
 
+## Features
+
+- [ ] Manuten√ß√£o de pacientes
+- [ ] Manuten√ß√£o de colaboradores
+- [ ] Agendamento de consultas
+- [ ] Fluxo de caixa
+- [ ] Relat√≥rios
 
 ## Tecnologias
 
 Backend:
 
-- [C#](https://docs.microsoft.com/pt-br/dotnet/csharp/) - Linguagem de programaÁ„o utilizada para desenvolvimento do mÛdulo backend
-- [Spring Boot](https://dotnet.microsoft.com/) - Framewwork utilizado para auxiliar no desenvolvimento do mÛdulo backend
+- [C#](https://docs.microsoft.com/pt-br/dotnet/csharp/) - Linguagem de programa√ß√£o utilizada para desenvolvimento do m√≥dulo backend
+- [.Net Core 3.1](https://dotnet.microsoft.com/) - Framewwork utilizado para auxiliar no desenvolvimento do m√≥dulo backend
 - [Swagger](https://swagger.io/) - Para documentar e testar a api
-- [xUnit](https://xunit.net/) - Para testes unit·rios e de integraÁ„o
-- [Docker](https://www.docker.com/) - Tecnologia utilizada para a entrega da aplicaÁ„o
-- [MongoDB](https://www.mongodb.com/) - Banco de dados utilizado para armazenar todas as informaÁıes do sistema
+- [xUnit](https://xunit.net/) - Para testes unit√°rios e de integra√ß√£o
+- [Docker](https://www.docker.com/) - Tecnologia utilizada para a entrega da aplica√ß√£o
+- [MySql](https://www.mysql.com/) - Banco de dados utilizado para armazenar todas as informa√ß√µes do sistema
+- [Entity Framework Core](https://docs.microsoft.com/pt-br/ef/core/) - Framework utilizado para facilitar o acesso a dados da aplica√ß√£o
 
-## InstalaÁ„o
+## Instala√ß√£o
 
 #### Docker
 - Use o arquivo dockerfile na raiz do projeto e gere uma imagem, exemplo de comandos:
@@ -21,13 +29,11 @@ Backend:
         docker push tag repositorio/nome-da-imagem
         docker pull repositorio/nome-da-imagem
 
-
 ## Testes
 
+### Testes unit√°rios
 
-### Testes unit·rios
-
-Como verificar a cobertura de testes ? 
+Para verificar a cobertura de testes:
 
 Instalar o plugin:
 - dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.8.6
@@ -39,23 +45,49 @@ Executar o comando no diretorio TestResults:
 - reportgenerator "-reports:coverage.cobertura.xml" "-targetdir:coveragereport" -reporttypes:Html
 
 
-
-## DocumentaÁ„o
-- Os mÈtodos est„o disponiveis na rota https://localhost:5001/swagger/index.html
-
-
+## Documenta√ß√£o
+- Os m√©todos est√£o disponiveis na rota https://localhost:5001/swagger/index.html
 
 ## Docker
 ### /dockerfile
 - Na raiz do projeto existe um arquivo dockerfile, pronto para ser usado e gerar uma imagem docker
 
 
-
 ## Andamento do projeto:
 
- - [x] Entidades de domÌnio e testes unit·tios
- - [ ] Services/UseCases e testes unit·rios
- - [ ] Adapters de entrada testes unit·rios
- - [ ] Modelos de entrada/saÌda e testes unit·rios
+ - [x] Entidades de dom√≠nio e testes unit√°r4ios
+ - [x] Swagger
+ - [ ] Services/UseCases e testes unit√°rios
+ - [ ] Adapters de entrada testes unit√°rios
+ - [ ] Modelos de entrada/sa√≠da e testes unit√°rios
  - [ ] Adapters de banco de dados
- - [ ] DB Entities e testes unit·rios
+ - [x] DB Entities e testes unit√°rios
+ - [x] Conex√£o com DB
+
+
+ ## Relat√≥rio de cobertura de c√≥digo:
+
+ ![code-coverage](https://user-images.githubusercontent.com/40812575/122695343-822c8000-d216-11eb-8d17-d7af8e72d2f7.PNG)
+
+
+ ## Arquitetura do projeto:
+
+         ClinicaLosacco.API
+            - Controllers que d√£o acesso ao sistema
+         
+         ClinicaLosacco.Application
+           - Modelos de Entrada
+           - Modelos de Sa√≠da
+           - Servi√ßos de Aplica√ß√£o
+
+         ClinicaLosacco.Infra
+           - Servi√ßos de infraestrutura (logging, cloud, db)
+           - Persist√™ncia
+           - Integra√ß√£o com outros sistemas
+         
+         ClinicaLosacco.Core
+            - Entidades
+            - Enums 
+            - Exce√ß√µes de dom√≠nio
+            - Interfaces
+            - Servi√ßos
