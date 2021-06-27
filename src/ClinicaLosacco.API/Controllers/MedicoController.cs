@@ -1,18 +1,26 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ClinicaLosacco.Application.InputModels;
+using ClinicaLosacco.Application.Interfaces;
 
 
 namespace ClinicaLosacco.APi.Controllers
 {
     [ApiController]
-    [Route("api/doctors")]
-    public class DoctorController : ControllerBase
+    [Route("api/medicos")]
+    public class MedicoController : ControllerBase
     {
 
+        private readonly IMedicoService _medicoService;
+        
+        public MedicoController(IMedicoService medicoService)
+        {
+            _medicoService = medicoService;
+        }
+
         [HttpPost]
-        public OkResult Create()
-        {            
-            //_accessMongo.Add(inputDoctorModel);
-            // colocar o caso de uso aqui.;
+        public OkResult Create([FromBody] MedicoInputModel medicoInputModel)
+        {
+            _medicoService.Add(medicoInputModel);
             return Ok();
         }
 
@@ -23,14 +31,14 @@ namespace ClinicaLosacco.APi.Controllers
             return Ok();
         }
 
-        [HttpGet("{doctorId}")]
+        [HttpGet("{medicoId}")]
         public OkResult GetById(int doctorId)
         {
             // colocar o caso de uso aqui.;
             return Ok();
         }
 
-        [HttpDelete("{doctorId}")]
+        [HttpDelete("{medicoId}")]
         public OkResult Inactivate(int id)
         {
             // colocar o caso de uso aqui.;

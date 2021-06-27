@@ -1,5 +1,5 @@
 ﻿
-namespace ClinicaLosacco.Application.DbModels
+namespace ClinicaLosacco.Core.DbModels
 {
     public class SecretariaDb
     {

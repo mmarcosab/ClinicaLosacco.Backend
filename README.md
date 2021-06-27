@@ -13,7 +13,7 @@
 Backend:
 
 - [C#](https://docs.microsoft.com/pt-br/dotnet/csharp/) - Linguagem de programação utilizada para desenvolvimento do módulo backend
-- [.Net Core](https://dotnet.microsoft.com/) - Framewwork utilizado para auxiliar no desenvolvimento do módulo backend
+- [.Net Core 3.1](https://dotnet.microsoft.com/) - Framewwork utilizado para auxiliar no desenvolvimento do módulo backend
 - [Swagger](https://swagger.io/) - Para documentar e testar a api
 - [xUnit](https://xunit.net/) - Para testes unitários e de integração
 - [Docker](https://www.docker.com/) - Tecnologia utilizada para a entrega da aplicação

@@ -1,19 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
-namespace ClinicaLosacco.Application.DbModels
+namespace ClinicaLosacco.Application.ViewModels
 {
-    public class MedicoDb
+    public class MedicoViewModel
     {
-        public int MedicoId { get; set; }
         public string Nome { get; set; }
         public string Email { get; set; }
         public string Telefone { get; set; }
-        public EnderecoDb Endereco { get; set; }
+        public EnderecoVielModel Endereco { get; set; }
         public string Crm { get; set; }
         public List<String> Especialidades { get; set; }
 
-        public MedicoDb(string nome, string email, string telefone, string crm, List<string> especialidades, EnderecoDb endereco)
+        public MedicoViewModel()
+        {
+        }
+
+        public MedicoViewModel(string nome, string email, string telefone, string crm, List<string> especialidades, EnderecoVielModel endereco)
         {
             Nome = nome;
             Email = email;
@@ -22,6 +26,5 @@ namespace ClinicaLosacco.Application.DbModels
             Especialidades = especialidades;
             Endereco = endereco;
         }
-
     }
 }

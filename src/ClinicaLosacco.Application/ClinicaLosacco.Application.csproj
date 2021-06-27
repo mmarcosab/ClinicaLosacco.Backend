@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ClinicaLosacco.Core\ClinicaLosacco.Core.csproj" />
+    <ProjectReference Include="..\ClinicaLosacco.Infra\ClinicaLosacco.Infra.csproj" />
   </ItemGroup>
 
 </Project>

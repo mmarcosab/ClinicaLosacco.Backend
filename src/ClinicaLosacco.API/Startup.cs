@@ -4,9 +4,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using ClinicaLosacco.Infra.AccessBD;
+using ClinicaLosacco.Infra.Persistencia;
 using Microsoft.EntityFrameworkCore;
-using MySqlConnector;
+using ClinicaLosacco.Application.Interfaces;
+using ClinicaLosacco.Application.Services;
 
 namespace ClinicaLosacco.APi
 {
@@ -31,7 +32,7 @@ namespace ClinicaLosacco.APi
 
             string mySqlConnectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContextPool<AppDbContext>(options => options.UseMySql(mySqlConnectionString, ServerVersion.AutoDetect(mySqlConnectionString)));
-
+            services.AddSingleton<MedicoService>();
 
         }
 
