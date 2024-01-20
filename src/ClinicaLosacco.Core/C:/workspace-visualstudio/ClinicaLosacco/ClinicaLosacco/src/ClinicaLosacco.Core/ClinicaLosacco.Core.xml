@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClinicaLosacco.Core</name>
+    </assembly>
+    <members>
+        <member name="T:ClinicaLosacco.Core.Entities.Medico">
+            <summary>
+            This class define a doctor of Clinica Losacco
+            </summary>
+        </member>
+    </members>
+</doc>
